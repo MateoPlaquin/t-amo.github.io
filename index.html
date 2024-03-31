@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de página con foto, dos botones centrados y alineados, una fuente moderna y un encabezado</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:first-child {
+            background-color: green;
+            color: white;
+        }
+
+        button:last-child {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>"Me amas?"</h1>
+        <img id="image" src="c2f60a2bfc4181fe05dc88db1d6161e6-3729303318.jpg" alt="imagen_gatito">
+        <br>
+        <div class="botones">
+            <button id="si-button" onclick="changeImage()">Sí</button>
+            <button>No</button>
+        </div>
+    </div>
+    <script>
+        function changeImage() {
+            document.getElementById("image").src = "gato+tapadito-1831976010.gif";
+        }
+    </script>
+</body>
+</html>
